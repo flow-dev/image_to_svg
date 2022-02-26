@@ -59,6 +59,7 @@ If you import SVG into blender, you can handle it as 3DCG data. Colorization is 
 
 実行結果の参考になるようにFBXファイルを添付しました。3DCGデータは扱いやすいようにカーブの削減と結合、簡単なマテリアルの貼り付けがblender上で行ってあります。
 
+FBX files are attached for reference, and the 3DCG data has been reduced and merged with curves and simple materials pasted in blender for easy handling.
 
 
 [flow-result_otsu_opencv.fbx](result_otsu_opencv.fbx)
