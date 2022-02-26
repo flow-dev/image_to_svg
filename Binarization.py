@@ -40,6 +40,7 @@ import os
 parser = argparse.ArgumentParser(description='Binarization')
 parser.add_argument('--img', type=str, required=True)
 parser.add_argument('--method', type=str, choices=['default', 'otsu', 'met', 'percentile'])
+parser.add_argument('--prepro', action='store_true')
 parser.add_argument('--mono_inv', action='store_true')
 args = parser.parse_args()
 
@@ -108,6 +109,27 @@ def ght_thresh(im, nu=None, tau=None, kappa=None, omega=0.5):
 def example():
     img_file_path = args.img
     im = cv2.imread(img_file_path)
+
+    if(args.prepro):
+        # weightedMedianFilter
+        tmp_dst = np.copy(im)
+        cv2.ximgproc.weightedMedianFilter(im, tmp_dst, 3, tmp_dst, 32, cv2.ximgproc.WMF_EXP)
+        im = tmp_dst
+
+        # fastGlobalSmootherFilter
+        tmp_upsample = np.copy(im)
+        fgs_lamda=8
+        fgs_sigma=3
+        cv2.ximgproc.fastGlobalSmootherFilter(im, tmp_upsample, fgs_lamda, fgs_sigma, tmp_upsample, 0.25, 3)
+        im = tmp_upsample.astype(np.uint8)
+
+        import matplotlib.pyplot as plt
+        im_show = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+        plt.imshow(im_show)#, cmap = 'gray')
+        plt.colorbar()
+        plt.show()
+        cv2.imwrite("rgb_wm_and_fgs.png", im)
+
     gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
 
     if(args.method=="otsu"):
