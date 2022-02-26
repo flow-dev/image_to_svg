@@ -29,7 +29,7 @@ hist_thresh
 <https://tech-blog.optim.co.jp/entry/2020/10/12/090000>
 
 ![sample_picture](sample_picture.png)
-![result_otsu_opencv](result_otsu_opencv.png)
+![sample_picture_otsu](sample_picture_otsu.png)
 
 ## Convert SVG vector images from binary (SVGのベクトル画像に変換)
 
@@ -62,7 +62,7 @@ If you import SVG into blender, you can handle it as 3DCG data. Colorization is 
 FBX files are attached for reference, and the 3DCG data has been reduced and merged with curves and simple materials pasted in blender for easy handling.
 
 
-[flow-result_otsu_opencv.fbx](result_otsu_opencv.fbx)
+[sample_picture_otsu.fbx](sample_picture_otsu.fbx)
 
 
 ![fbx_demo](reference/fbx_demo.png)
