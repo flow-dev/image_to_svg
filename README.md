@@ -65,6 +65,8 @@ FBX files are attached for reference, and the 3DCG data has been reduced and mer
 
 [sample_picture_otsu.fbx](sample_picture_otsu.fbx)
 
+![fbx_demo](reference/fbx_demo.png)
+
 ## Tips for Cleaning Up Meshes Generated from SVG
 
 * Altを押しながら辺を選択するとまとめて選択できる
@@ -72,6 +74,3 @@ FBX files are attached for reference, and the 3DCG data has been reduced and mer
 * 点の位置に段差があるときは、フラットシェードで平らにできる
 * 不要な頂点や辺を削除してもFキーで埋めることができる（頂点と点が入り組んでいる場合はいったん消して整理する）
 * fbxに書き出すとき、面を平らにせず、編集モードで三角化しないと崩れる <https://wp.graphact.com/2020/06/07/blender-boolean-howto-export-fbx/>
-
-
-![fbx_demo](reference/fbx_demo.png)
