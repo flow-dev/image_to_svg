@@ -59,15 +59,19 @@ If you import SVG into blender, you can handle it as 3DCG data. Colorization is 
 
 実行結果の参考になるようにFBXファイルを添付しました。3DCGデータは扱いやすいようにカーブの削減と結合、簡単なマテリアルの貼り付けがblender上で行ってあります。
 
-Blender3.0／SVGの使い方（ロゴやベクターの読み込み）
-※「限定的溶解」を適度に行った後、モディファイアのソリッド化で厚みを持たせると良い
-
-<https://signyamo.blog/blender_svg/>
+Blender3.0／SVGの使い方（ロゴやベクターの読み込み）※「限定的溶解」を適度に行った後、モディファイアのソリッド化で厚みを持たせると良い <https://signyamo.blog/blender_svg/>
 
 FBX files are attached for reference, and the 3DCG data has been reduced and merged with curves and simple materials pasted in blender for easy handling.
 
-
 [sample_picture_otsu.fbx](sample_picture_otsu.fbx)
+
+## Tips for Cleaning Up Meshes Generated from SVG
+
+* Altを押しながら辺を選択するとまとめて選択できる
+* 編集モード→メッシュ→マージ→距離でマージでがたつきがある点をある程度マージできる
+* 点の位置に段差があるときは、フラットシェードで平らにできる
+* 不要な頂点や辺を削除してもFキーで埋めることができる（頂点と点が入り組んでいる場合はいったん消して整理する）
+* fbxに書き出すとき、面を平らにせず、編集モードで三角化しないと崩れる <https://wp.graphact.com/2020/06/07/blender-boolean-howto-export-fbx/>
 
 
 ![fbx_demo](reference/fbx_demo.png)
